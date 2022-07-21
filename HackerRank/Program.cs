@@ -87,8 +87,6 @@
 //{
 //    public static void miniMaxSum(List<int> arr)
 //    {
-
-
 //        var (maxValor, maxIndex) = arr.Select((x, i) => (x, i)).Max();
 //        var (minValor, minIndex) = arr.Select((x, i) => (x, i)).Min();
 
@@ -108,12 +106,11 @@
 //                maxVal = i;
 //            }
 //        }
-
-
 //        var total = arr.Sum(x => Convert.ToInt64(x));
 
 //        var somaMini = total - maxValor;
 //        var somaMax = total - minVal;
+
 //        Console.WriteLine(string.Format("{0} {1}", somaMini, somaMax));
 //    }
 
