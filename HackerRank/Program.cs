@@ -318,4 +318,127 @@
 //=====================================================================================
 //
 
+//using System.CodeDom.Compiler;
+//using System.Collections.Generic;
+//using System.Collections;
+//using System.ComponentModel;
+//using System.Diagnostics.CodeAnalysis;
+//using System.Globalization;
+//using System.IO;
+//using System.Linq;
+//using System.Reflection;
+//using System.Runtime.Serialization;
+//using System.Text.RegularExpressions;
+//using System.Text;
+//using System;
+
+
+
+//class Result
+//{
+
+//    /*
+//     * Complete the 'findNumber' function below.
+//     *
+//     * The function is expected to return a STRING.
+//     * The function accepts following parameters:
+//     *  1. INTEGER_ARRAY arr
+//     *  2. INTEGER k
+//     */
+
+//    public static string findNumber(List<int> arr, int k)
+//    {
+//        return arr.Any(element => element == k) ? "YES" : "NO";
+
+//}
+
+//class Solution
+//{
+//        public static void Main(string[] args)
+//        {
+//            TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
+
+//            int arrCount = Convert.ToInt32(Console.ReadLine().Trim());
+
+//            List<int> arr = new List<int>();
+
+//            for (int i = 0; i < arrCount; i++)
+//            {
+//                int arrItem = Convert.ToInt32(Console.ReadLine().Trim());
+//                arr.Add(arrItem);
+//            }
+
+//            int k = Convert.ToInt32(Console.ReadLine().Trim());
+
+//            string result = Result.findNumber(arr, k);
+
+//            textWriter.WriteLine(result);
+
+//            textWriter.Flush();
+//            textWriter.Close();
+//        }
+//    }
+//}
+
+using System.CodeDom.Compiler;
+using System.Collections.Generic;
+using System.Collections;
+using System.ComponentModel;
+using System.Diagnostics.CodeAnalysis;
+using System.Globalization;
+using System.IO;
+using System.Linq;
+using System.Reflection;
+using System.Runtime.Serialization;
+using System.Text.RegularExpressions;
+using System.Text;
+using System;
+
+
+
+class Result
+{
+
+    /*
+     * Complete the 'oddNumbers' function below.
+     *
+     * The function is expected to return an INTEGER_ARRAY.
+     * The function accepts following parameters:
+     *  1. INTEGER l
+     *  2. INTEGER r
+     */
+
+    public static List<int> oddNumbers(int l, int r)
+    {
+        List<int> result = new();
+        for (int i = l; i <= r; i++)
+        {
+            if(i % 2 != 0)
+            {
+                result.Add(i);
+            }
+        }
+            return result;
+    }
+
+}
+
+class Solution
+{
+    public static void Main(string[] args)
+    {
+        TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
+
+        int l = Convert.ToInt32(Console.ReadLine().Trim());
+
+        int r = Convert.ToInt32(Console.ReadLine().Trim());
+
+        List<int> result = Result.oddNumbers(l, r);
+
+        textWriter.WriteLine(String.Join("\n", result));
+
+        textWriter.Flush();
+        textWriter.Close();
+    }
+}
 
